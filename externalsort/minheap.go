@@ -27,6 +27,6 @@ func (h *MinHeap) Pop() any {
 	old := *h
 	n := len(old)
 	item := old[n-1]
-	*h = old[0 : n-1]
+	*h = old[:n-1]
 	return item
 }
